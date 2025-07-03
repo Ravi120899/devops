@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checkout Succesfull'
+              
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Build Succesfull'
+              
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Test Succesfull'
+              
+            }
+        }
+
+        stage('Deploy') {
+           
+            steps {
+                echo 'Deploy Succesfull'
+                
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
